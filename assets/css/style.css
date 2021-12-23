@@ -1,0 +1,290 @@
+:root
+{
+    --color-white: 255, 255, 255;
+    --color-black: 0, 0, 0;
+    --color-grey: 39, 39, 39;
+}
+*
+{
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body
+{
+    margin:  0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+
+ul, ol, select
+{
+    margin:  0;
+    padding: 0;
+    list-style: none;
+}
+a
+{
+    color: currentColor;
+}
+input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none;
+}
+input[type=number] { 
+    appearance:      textfield;
+    -moz-appearance: textfield;
+}
+
+.form_searching
+{
+    margin: 1% auto;
+    width:    500px;
+    height:    auto;
+    font-size: 18px;
+
+    user-select:         none;
+    -ms-user-select:     none;
+    -moz-user-select:    none;
+    -webkit-user-select: none;
+}
+.form_searching details
+{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.form_searching details:last-child
+{
+    margin-bottom: 0;
+}
+.form_searching summary::marker
+{
+    color: currentColor;
+}
+.form_searching label
+{
+    position: absolute;
+    display:     block;
+    top:             50%;
+    transform: translateY(-50%);
+    margin-left:   10px;
+    padding:     0 5px;
+    transition: all 100ms linear;
+    color: rgb(var(--color-black), .522);
+    cursor: text;
+    background: #fff;
+    z-index:         1;
+}
+.form_searching summary {
+    display:                 flex;
+    align-items:           center;
+    cursor:               pointer;
+    text-transform:     uppercase;
+    color: rgb(var(--color-grey));
+    font-size:              1.1em;
+    font-weight:              900;
+    padding:                  5px;
+    border-radius:            3px;
+    background:         #d6d6d6;
+}
+details span[class="m_icon"]
+{
+    display:                flex;
+    width:                 1.2em;
+    height:                1.2em;
+    margin-right:           .2em;
+    padding:              .150em;
+    transform:    rotate(-90deg);
+    transition: all 200ms linear;
+}
+details[open] span[class="m_icon"]
+{
+    transform:      rotate(0deg);
+    transition: all 200ms linear;
+}
+span[class="m_icon"] > svg
+{
+    width:        auto;
+    height:       100%;
+    fill: currentColor;
+}
+.form_searching summary:hover
+{
+    background-color: #bbbbbb;
+}
+.form_searching summary:active span[class="m_icon"] 
+{
+    animation: tt 340ms ease-in-out;
+}
+@keyframes tt
+{
+    0% {margin-right: .2em;}
+    50% {margin-right: .6em;}
+    100% {margin-right: .2em;}
+}
+
+details[open] summary ~ *
+{
+    animation: form-transition 300ms ease-in-out;
+}
+@keyframes form-transition
+{
+    0%   {opacity: 0; margin-left: -10px;}
+    100% {opacity: 1; margin-left: 0px;}
+}
+
+.form_searching input,
+.form_searching select
+{
+    width: 100%;
+    border-radius: 3px;
+    padding: 10px 10px;
+    font-size: .9em;
+    outline: none;
+    color: #000000a4;
+    border: 1px solid #d2d2d2;
+    background: transparent;
+}
+.form_searching input:focus,
+.form_searching select:focus
+{
+    color: rgb(var(--color-black), .643);
+}
+input:focus + label,
+input:not(:placeholder-shown) + label,
+select:focus + label,
+select:not(:placeholder-shown) + label
+{
+    transform: translateY(-.5em);
+    margin-left:   5px;
+    background: #fff;
+    color: rgba(var(--color-black), .643);
+    font-weight: 900;
+    top: 0;
+    cursor: default;
+}
+.form_searching select
+{
+    cursor: pointer;
+    color: rgb(var(--color-black), .643);
+}
+.form_searching select option
+{
+    font-size: 1.4em;
+    color: rgb(var(--color-black), .522);
+    background: #eee;
+}
+.form_searching details div ul
+{
+    position: relative;
+    margin-top: 10px;
+    padding-top: 20px; 
+    padding-bottom: 10px;
+    padding-left: 5px; 
+    padding-right: 5px;
+}
+.form_searching details div ul:first-child
+{
+    margin-top: 0;
+    padding-top: 10px;
+}
+.form_searching details div ul:first-child .line-list
+{
+    display: none;
+}
+.line-list
+{
+    background: rgb(var(--color-grey));
+    border-radius: 50%;
+    position: absolute;
+    width: .5em;
+    height: .5em;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.form_searching li
+{
+    position: relative;
+    margin-bottom: 15px;
+}
+.form_searching div ul li:nth-child(2)
+{
+    margin-top: 10px;
+}
+.form_searching li:last-child
+{
+    margin-bottom: 0;
+}
+.btn_add
+{
+    display: inline-block;
+    margin: 10px 0;
+    color: rgb(var(--color-white));
+    padding: 5px 10px;
+    border-radius: 2px;
+    background: rgb(var(--color-black), .3);
+}
+.btn_remove
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.6em;
+    height: 1.6em;
+    color: #3278e1;
+    font-size: 0.8em;
+    background: red;
+}
+.btn_remove svg
+{
+    width: auto;
+    height: 100%;
+    fill: currentColor;
+}
+.btn_remove svg:last-child
+{
+    display: none;
+}
+.btn_remove:hover svg:first-child
+{
+    display: none;
+}
+.btn_remove:hover svg:last-child
+{
+    display: block;
+}
+.btn_add,
+.btn_remove
+{
+    margin: 0 5px;
+}
+.btn_add:hover
+{
+    background: rgb(var(--color-black), .4);
+}
+.btn_remove:hover
+{
+    text-decoration: underline;
+}
+
+.form_searching details div ul:first-child .btn_remove
+{
+    display: none;
+}
+
+
+
+@media only screen and (max-width:768px)
+{
+    .form_searching
+    {
+        width:    100%;
+        font-size: 24px;
+    }
+    .form_searching input, 
+    .form_searching select
+    {
+        padding: 20px;
+        font-size: .9em;
+    }
+}
