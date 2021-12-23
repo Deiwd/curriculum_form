@@ -1,0 +1,1 @@
+Repository created to allocate B7Web course projects.
