@@ -2,7 +2,10 @@
 {
     --color-white: 255, 255, 255;
     --color-black: 0, 0, 0;
-    --color-grey: 39, 39, 39;
+    --color-grey: 52, 58, 64;
+    --color-navy-blue: 69, 93, 122;
+    --color-yellow: 255, 193, 7;
+    --bg-white: 225, 232, 235;
 }
 *
 {
@@ -15,6 +18,7 @@ body
     margin:  0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
+    background-color: rgb(var(--bg-white));
 }
 
 ul, ol, select
@@ -27,6 +31,16 @@ a
 {
     color: currentColor;
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator
+{
+    display: flex;
+    margin: 0;
+    width: 22.5em;
+    opacity: 1;
+    cursor: pointer;
+    background-position: right;
+}
 input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none;
 }
@@ -35,6 +49,85 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+.container
+{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 900px;
+}
+#header_main
+{
+    background: rgb(var(--color-grey));
+    height: 50px;
+}
+.menu-content
+{
+    position: relative;
+}
+.menu-content,
+.menu-content > .logo
+{
+    height: inherit;
+}
+.menu-content > .logo
+{
+    float: left;
+    padding: 2px 0;
+}
+.menu-content > .logo a svg
+{
+    width: auto;
+    height: 100%;
+}
+.logo g[id="My"] g:last-child
+{
+    fill: #FCD95E;
+    fill: rgb(var(--color-yellow));
+}
+.logo g[id="My"] g:first-child,
+.logo g[id="ABILITY"]
+{
+    fill: #fff;
+    fill: rgb(var(--color-white));
+}
+.menu-content > .menu_link
+{
+    float: right;
+    position: relative;
+    height: 100%;
+}
+.menu-content > .menu_link > nav 
+{
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+.menu-content > .menu_link > nav li
+{
+    border-radius: .2em;
+    margin-left: .5em;
+    color: rgb(var(--color-white));
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .9em;
+    position: relative;
+    box-shadow: 0 0 0 #fff;
+    transition: all 200ms ease-in-out;
+}
+.menu-content > .menu_link > nav li:first-child
+{
+    margin-left: 0;
+}
+.menu-content > .menu_link > nav li > a
+{
+    display: block;
+    padding: .4em .8em;
+}
+.menu-content > .menu_link > nav li:hover
+{
+    background: rgb(var(--color-yellow));
+    color: rgb(var(--color-grey));
+}
 .form_searching
 {
     margin: 1% auto;
@@ -68,10 +161,9 @@ input[type=number] {
     transform: translateY(-50%);
     margin-left:   10px;
     padding:     0 5px;
-    transition: all 100ms linear;
-    color: rgb(var(--color-black), .522);
+    transition: all 200ms ease-in-out;
+    color: rgb(var(--color-grey), .522);
     cursor: text;
-    background: #fff;
     z-index:         1;
 }
 .form_searching summary {
@@ -84,7 +176,15 @@ input[type=number] {
     font-weight:              900;
     padding:                  5px;
     border-radius:            3px;
-    background:         #d6d6d6;
+    /*background: linear-gradient(to right, 
+                                rgb(var(--color-grey)), 
+                                rgb(var(--color-purple)));*/
+    background: transparent;
+}
+details[open] summary
+{
+    background: rgb(var(--color-grey));
+    color: rgb(var(--bg-white));
 }
 details span[class="m_icon"]
 {
@@ -94,12 +194,12 @@ details span[class="m_icon"]
     margin-right:           .2em;
     padding:              .150em;
     transform:    rotate(-90deg);
-    transition: all 200ms linear;
+    transition: all 200ms ease-in-out;
 }
 details[open] span[class="m_icon"]
 {
     transform:      rotate(0deg);
-    transition: all 200ms linear;
+    transition: all 200ms ease-in-out;
 }
 span[class="m_icon"] > svg
 {
@@ -109,13 +209,14 @@ span[class="m_icon"] > svg
 }
 .form_searching summary:hover
 {
-    background-color: #bbbbbb;
+    background-color: rgb(var(--color-grey), .9);
+    color:rgb(var(--bg-white));
 }
 .form_searching summary:active span[class="m_icon"] 
 {
-    animation: tt 340ms ease-in-out;
+    animation: summ-effect 200ms ease-in-out;
 }
-@keyframes tt
+@keyframes summ-effect
 {
     0% {margin-right: .2em;}
     50% {margin-right: .6em;}
@@ -124,7 +225,7 @@ span[class="m_icon"] > svg
 
 details[open] summary ~ *
 {
-    animation: form-transition 300ms ease-in-out;
+    animation: form-transition .5s ease-in-out;
 }
 @keyframes form-transition
 {
@@ -133,16 +234,25 @@ details[open] summary ~ *
 }
 
 .form_searching input,
-.form_searching select
+.form_searching select,
+button[type="submit"]
 {
     width: 100%;
     border-radius: 3px;
     padding: 10px 10px;
     font-size: .9em;
     outline: none;
-    color: #000000a4;
-    border: 1px solid #d2d2d2;
+    color: rgb(var(--color-grey));
+    border: 1px solid rgb(var(--color-navy-blue), .5);
     background: transparent;
+}
+.form_searching details > div > ul > li:nth-child(3) input
+{
+    border-radius: 0 0 3px 3px;
+}
+.form_searching details > div > ul:first-child li input
+{
+    border-radius: 3px;
 }
 .form_searching input:focus,
 .form_searching select:focus
@@ -156,22 +266,29 @@ select:not(:placeholder-shown) + label
 {
     transform: translateY(-.5em);
     margin-left:   5px;
-    background: #fff;
-    color: rgba(var(--color-black), .643);
+    border-radius: 5px;
+    color: rgb(var(--color-navy-blue));
     font-weight: 900;
     top: 0;
     cursor: default;
 }
+.form_searching label,
+input:focus + label,
+input:not(:placeholder-shown) + label,
+select:focus + label,
+select:not(:placeholder-shown) + label
+{
+    background: rgb(var(--bg-white));
+}
 .form_searching select
 {
     cursor: pointer;
-    color: rgb(var(--color-black), .643);
 }
 .form_searching select option
 {
     font-size: 1.4em;
-    color: rgb(var(--color-black), .522);
-    background: #eee;
+    color: rgb(var(--color-yellow), .522);
+    background: rgb(var(--color-grey));
 }
 .form_searching details div ul
 {
@@ -191,17 +308,6 @@ select:not(:placeholder-shown) + label
 {
     display: none;
 }
-.line-list
-{
-    background: rgb(var(--color-grey));
-    border-radius: 50%;
-    position: absolute;
-    width: .5em;
-    height: .5em;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
 .form_searching li
 {
     position: relative;
@@ -211,60 +317,126 @@ select:not(:placeholder-shown) + label
 {
     margin-top: 10px;
 }
-.form_searching li:last-child
+.line-list
 {
-    margin-bottom: 0;
+    opacity: .1;
+    background: rgb(var(--color-navy-blue));
+    border-radius: 1em;
+    position: absolute;
+    width: 8em;
+    height: .2em;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.btn_add
+.line-list::after,
+.line-list::before
 {
-    display: inline-block;
-    margin: 10px 0;
-    color: rgb(var(--color-white));
-    padding: 5px 10px;
-    border-radius: 2px;
-    background: rgb(var(--color-black), .3);
+    content: '';
+    position: absolute;
+    width: .3em;
+    height: .3em;
+    top: -.35em;
+    background: transparent;
+    border: .3em solid rgb(var(--color-navy-blue));
+    transform: rotate(45deg);
+}
+.line-list::after
+{
+    left: -.9em;
+}
+.line-list::before
+{
+    right: -.9em;
 }
 .btn_remove
 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 1.6em;
-    height: 1.6em;
-    color: #3278e1;
-    font-size: 0.8em;
-    background: red;
+    height: 1.5em;
+    font-size: 1em;
+    padding: 3px 0;
+    border-radius: 3px 3px 0 0;
+    background-color: rgb(var(--color-navy-blue));
+    color: rgb(var(--bg-white));
+}
+.btn_remove > a
+{
+    transition: all 200ms ease-in-out;
+    margin-right: .1em;
+    height: 100%;
+    float: right;
+}
+.btn_remove > a div
+{
+    float: left;
+    display: flex;
+    height: inherit;
+    align-items: center;
+}
+.btn_remove > a div:first-child
+{
+    border-radius: 0.09em;
+    overflow: hidden;
+}
+.btn_remove > a div:last-child
+{
+    margin-left: -2em;
+    margin-right: .3em;
+    display: none;
+    opacity: 1;
+}
+.btn_remove > a:hover div:last-child
+{
+    animation: delet_form 200ms ease-in-out;
+    text-transform: lowercase;
+    margin-left: .2em;
+    display: flex;
+    opacity: 1;
+}
+@keyframes delet_form
+{
+    from  {margin-left: -2em;opacity: 0;display: none;}
+    to    {margin-left: .2em;opacity: 1;display: flex;}
+}
+.btn_remove > a:hover
+{
+    background: rgba(var(--color-white), .4);
+    border-radius: 3px;
 }
 .btn_remove svg
 {
     width: auto;
-    height: 100%;
+    height: inherit;
     fill: currentColor;
 }
 .btn_remove svg:last-child
 {
     display: none;
+    opacity: 0;
 }
-.btn_remove:hover svg:first-child
+.btn_remove > a:hover svg:first-child
 {
     display: none;
 }
-.btn_remove:hover svg:last-child
+.btn_remove > a:hover svg:last-child
 {
     display: block;
+    opacity: 1;
 }
-.btn_add,
-.btn_remove
+.btn_add
 {
-    margin: 0 5px;
+    display: inline-block;
+    margin: 10px 0;
+    color: rgb(var(--color-navy-blue));
+    padding: 5px 10px;
+    border-radius: 2px;
+    border: 1px solid rgb(var(--color-navy-blue));
+    background: transparent;
 }
 .btn_add:hover
 {
-    background: rgb(var(--color-black), .4);
-}
-.btn_remove:hover
-{
-    text-decoration: underline;
+    background: rgb(var(--color-navy-blue));
+    border-color: transparent;
+    color: rgb(var(--bg-white));
 }
 
 .form_searching details div ul:first-child .btn_remove
@@ -272,19 +444,96 @@ select:not(:placeholder-shown) + label
     display: none;
 }
 
-
-
-@media only screen and (max-width:768px)
+button[type="submit"]
 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: .5em 0 0 0;
+    font-weight: 600;
+    letter-spacing: .2em;
+    color: rgb(var(--color-white));
+    text-transform: uppercase;
+    background: rgb(var(--color-grey));
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    z-index: 1;
+}
+button[type="submit"]::after
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transform: all 200ms ease-in-out;
+    background: rgb(var(--color-black), .2);
+    z-index: -1;
+}
+button[type="submit"]:hover
+{
+    transform: scale(0.97);
+    -o-transform: scale(0.97);
+    -moz-transform: scale(0.97);
+    -webkit-transform: scale(0.97);
+}
+button[type="submit"]:hover::after
+{
+    opacity: 1;
+}
+button[type="submit"] span
+{
+    height: 1em;
+    margin-right: .5em;
+}
+button[type="submit"] span svg
+{
+    width: auto;
+    height: 100%;
+    fill: rgb(var(--color-yellow));
+}
+@media only screen and (max-width:900px)
+{
+    .container
+    {
+        max-width: 720px;
+    }
+}
+@media only screen and (max-width:720px)
+{
+    .container
+    {
+        max-width: 100%;
+    }
+    #header_main
+    {
+        height: 80px;
+    }
+    .menu-content > .logo
+    {
+        margin-left: .4em;
+    }
+    #content_main
+    {
+        margin-top: 1;
+        margin: 0 10px;
+    }
     .form_searching
     {
+        margin: 5% auto;
         width:    100%;
         font-size: 24px;
+    }
+    .form_searching summary
+    {
+        padding: 10px 5px;
     }
     .form_searching input, 
     .form_searching select
     {
-        padding: 20px;
+        padding: 18px;
         font-size: .9em;
     }
 }

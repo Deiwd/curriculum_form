@@ -8,240 +8,342 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <form method="POST" class="form_searching">
-            <details class="section_one" open>
-                <summary>
-                    <span class="m_icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 512 512" xml:space="preserve">
-                            <g xmlns="http://www.w3.org/2000/svg">
-                                <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751   c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0   c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" data-original="#000000"></path>
-                            </g>
-                        </svg>
-                    </span>
-                    Dados do Usuário
-                </summary>
-                <div>
-                    <ul>
-                        <div class="line-list"></div>
-                        <li>
-                            <input type="text" id="first_name" placeholder=" " required autocomplete="off" />
-                            <label for="first_name">Nome</label>
-                        </li>
-                        <li>
-                            <input type="text" id="last_name" placeholder=" " required autocomplete="off" />
-                            <label for="last_name">Sobrenome</label>
-                        </li>
-                        <li>
-                            <select name="" id="sexo" placeholder=" " required>
-                                <option value=" " disabled selected>-- Selecionar --</option>
-                                <option value="One">Masculino</option>
-                                <option value="Two">Feminino</option>
-                            </select>
-                            <label for="sexo">Sexo</label>
-                        </li>
-                        <li>
-                            <select name="civil_status" id="civil_status" required>
-                                <option value=" " disabled selected>-- Selecionar --</option>
-                                <option value="one"><span>Solteiro(a)</span></option>
-                                <option value="two">Casado(a)</option>
-                                <option value="three">Viúvo(a)</option>
-                            </select>
-                            <label for="civil_status">Estado Civil</label>
-                        </li>
-                        <li>
-                            <input type="date" id="birth_date" required />
-                            <label for="birth_date">Data de Nascimento</label>
-                        </li>
-                        <li>  
-                            <select name="education_status" id="education_status" required>
-                                <option value="" disabled selected>-- Selecionar --</option>
-                                <option value="one">Ensino Médio Completo</option>
-                                <option value="two">Ensino Médio Incompleto</option>
-                                <option value="three">Ensino Superior Completo</option>
-                                <option value="four">Ensino Superior Incompleto</option>
-                            </select>
-                            <label for="education_status">Escolaridade</label>
-                        </li>
-                        <li>
-                            <input type="number" id="tel_number" placeholder=" " autocomplete="off" />
-                            <label for="tel_number">Telefone</label>
-                        </li>
-                        <li>
-                            <input type="number" id="phone_number" placeholder=" " required autocomplete="off" />
-                            <label for="phone_number">Celular</label>
-                        </li>
-                        <li>
-                            <input type="email" id="email" placeholder=" " required autocomplete="off" />
-                            <label for="email">E-mail</label>
-                        </li>
-                    </ul>
-                </div>
-            </details>
-
-            <details class="section_two">
-                <summary>
-                    <span class="m_icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 512 512" xml:space="preserve">
-                            <g xmlns="http://www.w3.org/2000/svg">
-                                <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751   c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0   c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" data-original="#000000"></path>
-                            </g>
-                        </svg>
-                    </span>
-                    Endereço
-                </summary>
-                <div>
-                    <ul>
-                        <div class="line-list"></div>
-                        <li> 
-                            <input type="number" id="zip" placeholder=" " autocomplete="off" />
-                            <label for="zip" autocomplete="off">CEP</label>
-                        </li>
-                        <li>
-                            <input type="text" id="name_city" placeholder=" " autocomplete="off" />
-                            <label for="name_city">Cidade</label>
-                        </li>
-                        <li>
-                            <input type="text" id="name_uf" placeholder=" " autocomplete="off" />
-                            <label for="name_uf">Estado</label>
-                        </li>
-                        <li>
-                            <input type="text" id="neighborhood_name" placeholder=" " autocomplete="off" />
-                            <label for="neighborhood_name">Bairro</label>
-                        </li>
-                        <li>
-                            <input type="text" id="address" placeholder=" " autocomplete="off" />
-                            <label for="address">Rua</label>
-                        </li>
-                        <li>
-                            <input type="number" id="address2" placeholder=" " autocomplete="off" />
-                            <label for="address2">Número</label>
-                        </li>
-                    </ul>
-                </div>
-            </details>
-
-            <details class="section_three">
-                <summary>
-                    <span class="m_icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 512 512" xml:space="preserve">
-                            <g xmlns="http://www.w3.org/2000/svg">
-                                <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751   c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0   c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" data-original="#000000"></path>
-                            </g>
-                        </svg>
-                    </span>
-                    Cursos
-                </summary>
-                <div>
-                    <ul>
-                        <div class="line-list"></div>
-                        <li>
-                            <input type="text" id="course_company_name" placeholder=" " autocomplete="off" />
-                            <label for="course_company_name" autocomplete="off">Nome</label>
-                        </li>
-                        <li>
-                            <input type="text" id="course_function" placeholder=" " autocomplete="off" />
-                            <label for="course_function">Função</label>
-                        </li>
-                        <li>
-                            <select id="course_status" placeholder=" ">
-                                    <option value="" disabled selected>-- Selecionar --</option>
-                                    <option value="one">Concluído</option>
-                                    <option value="one">Ativo</option>
-                                    <option value="one">Cancelado</option>
-                            </select>
-                            <label for="course_status">Status</label>
-                        </li>
-                        <li>
-                            <input type="date" id="course_start" placeholder=" " autocomplete="off" />
-                            <label for="course_start">Início</label>
-                        </li>
-                        <li>
-                            <input type="date" id="course_end" placeholder=" " autocomplete="off" />
-                            <label for="course_end">Término</label>
-                        </li>
-                        <a href class="btn_remove">Remover</a>
-                    </ul>
-                    <ul>
-                        <div class="line-list"></div>
-                        <a href class="btn_remove">
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 25 25" style="enable-background:new 0 0 512 512" xml:space="preserve">
+        <header id="header_main">
+            <div class="menu-content container">
+                <div class="logo">
+                    <a href="">
+                        <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 940 860" style="enable-background:new 0 0 940 755;" xml:space="preserve">
+                            <g id="My">
                                 <g>
-                                    <path d="M19.5,4H17V3.25A1.37,1.37,0,0,0,15.51,2h-6A1.37,1.37,0,0,0,8,3.25V4H5.5A1.5,1.5,0,0,0,4,5.5v2a.5.5,0,0,0,.5.5H5V21.5A1.5,1.5,0,0,0,6.5,23h12A1.5,1.5,0,0,0,20,21.5V8h.5a.5.5,0,0,0,.5-.5v-2A1.5,1.5,0,0,0,19.5,4ZM9,3.25c0-.09.18-.25.49-.25h6c.31,0,.49.16.49.25V4H9ZM19,21.5a.5.5,0,0,1-.5.5H6.5a.5.5,0,0,1-.5-.5V8H19ZM20,7H5V5.5A.5.5,0,0,1,5.5,5h14a.5.5,0,0,1,.5.5Z" ></path>
+                                    <path d="M460.44,518.59h-59.71V234.28L310.8,518.59h-30.69L189.7,234.28v284.31h-47.82V193.84h91.6l68.04,209.13l66.85-209.13
+                                        h92.07V518.59z"/>
                                 </g>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 25 25" style="enable-background:new 0 0 512 512" xml:space="preserve">~
                                 <g>
-                                    <path d="m19.5 4h-14a1.5 1.5 0 0 0 -1.5 1.5v2a.5.5 0 0 0 .5.5h16a.5.5 0 0 0 .5-.5v-2a1.5 1.5 0 0 0 -1.5-1.5z"></path>
-                                    <path d="m16.5 5a.5.5 0 0 1 -.5-.5v-1.25c0-.09-.18-.25-.49-.25h-6c-.33 0-.51.16-.51.25v1.25a.5.5 0 0 1 -1 0v-1.25a1.37 1.37 0 0 1 1.49-1.25h6a1.37 1.37 0 0 1 1.51 1.25v1.25a.5.5 0 0 1 -.5.5z"></path>
-                                    <path d="m20 9v12.5a1.5 1.5 0 0 1 -1.5 1.5h-12a1.5 1.5 0 0 1 -1.5-1.5v-12.5z"></path>
+                                    <path d="M614.18,488.96h145.63v29.13H614.18V488.96z"/>
+                                    <path d="M682.65,100.9c-97.22,0-176.03,78.8-176.04,176.02c0,62.89,33.55,121.01,88.02,152.46v45.58h66.01V354.72
+                                        l-56.21-37.47c-6.12-4.08-9.8-10.95-9.8-18.31v-44.01h44.01v32.23l44.01,29.34l44.01-29.34v-32.23h44.01v44.01
+                                        c0,7.36-3.68,14.23-9.8,18.31l-56.21,37.47v120.25h66.01v-45.58c84.2-48.61,113.05-156.26,64.44-240.46
+                                        C803.66,134.46,745.54,100.9,682.65,100.9z M748.66,210.92c-12.15,0-22-9.85-22-22s9.85-22,22-22c12.15,0,22,9.85,22,22
+                                        S760.81,210.92,748.66,210.92z"/>
                                 </g>
-                            </svg>
-                        </a>
-                        <li>
-                            <input type="text" id="course_company_name-2" placeholder=" " autocomplete="off" />
-                            <label for="course_company_name-2" autocomplete="off">Nome</label>
-                        </li>
-                        <li>
-                            <input type="text" id="course_function-2" placeholder=" " autocomplete="off" />
-                            <label for="course_function-2">Função</label>
-                        </li>
-                        <li>
-                            <select id="course_status-2" placeholder=" ">
-                                    <option value="" disabled selected>-- Selecionar --</option>
-                                    <option value="one">Concluído</option>
-                                    <option value="one">Ativo</option>
-                                    <option value="one">Cancelado</option>
-                            </select>
-                            <label for="course_status-2">Status</label>
-                        </li>
-                        <li>
-                            <input type="date" id="course_start-2" placeholder=" " autocomplete="off" />
-                            <label for="course_start-2">Início</label>
-                        </li>
-                        <li>
-                            <input type="date" id="course_end-2" placeholder=" " autocomplete="off" />
-                            <label for="course_end-2">Término</label>
-                        </li>
-                    </ul>
-                </div>
-                <a href class="btn_add">Adicionar +</a>
-            </details>
-
-            <details class="section_four">
-                <summary>
-                    <span class="m_icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 512 512" xml:space="preserve">
-                            <g xmlns="http://www.w3.org/2000/svg">
-                                <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751   c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0   c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" data-original="#000000"></path>
+                            </g>
+                            <g id="ABILITY">
+                                <path d="M186.39,719.69h-33.99l-14.09-42.01H70.45l-13.83,42.01H29.48l58.55-176.42h39.16L186.39,719.69z M129.78,652.22
+                                    l-25.72-78.71l-25.72,78.71H129.78z"/>
+                                <path d="M207.58,719.69V543.27h68.76c11.63,0,21.28,1.21,28.95,3.62c7.67,2.41,14.3,7.45,19.9,15.12c5.6,7.67,8.4,16.67,8.4,27.01
+                                    c0,9.74-2.84,18.2-8.53,25.4c-5.69,7.2-13.53,11.78-23.52,13.76c12.41,2.16,21.8,7.2,28.18,15.12c6.38,7.93,9.56,17.32,9.56,28.18
+                                    c0,13.62-4.46,25.05-13.38,34.31c-8.92,9.26-22.64,13.89-41.17,13.89H207.58z M237.7,617.33h38.77c7.93,0,14.2-2.37,18.81-7.11
+                                    c4.61-4.74,6.91-10.77,6.91-18.09c0-8.1-2.63-14.07-7.88-17.9c-5.26-3.83-11.42-5.75-18.48-5.75H237.7V617.33z M237.7,693.19h41.1
+                                    c8.7,0,15.57-2.28,20.62-6.85c5.04-4.57,7.56-10.73,7.56-18.48c0-7.41-2.56-13.48-7.69-18.22c-5.13-4.74-11.91-7.11-20.36-7.11
+                                    H237.7V693.19z"/>
+                                <path d="M400.16,719.69h-31.79V543.27h31.79V719.69z"/>
+                                <path d="M547.5,719.69H438.93V543.27h33.48v147.6h75.09V719.69z"/>
+                                <path d="M602.69,719.69h-31.79V543.27h31.79V719.69z"/>
+                                <path d="M703.11,719.69h-34.12V570.54h-46.92v-27.27h127.95v27.27h-46.92V719.69z"/>
+                                <path d="M851.49,719.69h-33.73v-74.45l-60.1-101.98h38.51l41.88,72.77l40.07-72.77h30.5l-57.13,101.98V719.69z"/>
                             </g>
                         </svg>
-                    </span>
-                    Experiência
-                </summary>
-                <div>
-                    <ul>
-                        <div class="line-list"></div>
-                        <li>
-                            <input type="text" id="company_name" placeholder=" " autocomplete="off" />
-                            <label for="company_name">Empresa</label>
-                        </li>
-                        <li>  
-                            <input type="text" id="work_function" placeholder=" " autocomplete="off" />
-                            <label for="work_function">Função</label>
-                        </li>
-                        <li>
-                            <input type="date" id="start_work" placeholder=" " autocomplete="off" />
-                            <label for="start_work">Início</label>
-                        </li>
-                        <li>
-                            <input type="date" id="work_end" placeholder=" " autocomplete="off" />
-                            <label for="work_end">Término</label>
-                        </li>
-                        <a href class="btn_remove">Remover</a>
-                    </ul>
+                    </a>
                 </div>
-                <a href class="btn_add">Adicionar +</a>
-            </details>
-        </form>
+                <ul class="menu_link">
+                    <nav>
+                        <li><a href>Pagina inicial</a></li>
+                        <li><a href >Contato</a></li>
+                    </nav>
+                </ul>
+            </div>
+        </header>
+        <div id="content_main">
+            <div class="container">
+                <form method="POST" class="form_searching">
+                    <details class="section_one" open>
+                        <summary>
+                            <span class="m_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751   c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0   c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" data-original="#000000"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                            Dados do Usuário
+                        </summary>
+                        <div>
+                            <ul>
+                                <div class="line-list"></div>
+                                <li>
+                                    <input type="text" id="first_name" placeholder=" " required autocomplete="off" />
+                                    <label for="first_name">Nome</label>
+                                </li>
+                                <li>
+                                    <input type="text" id="last_name" placeholder=" " required autocomplete="off" />
+                                    <label for="last_name">Sobrenome</label>
+                                </li>
+                                <li>
+                                    <select name="" id="sexo" placeholder=" " required>
+                                        <option value=" " disabled selected>-- Selecionar --</option>
+                                        <option value="One">Masculino</option>
+                                        <option value="Two">Feminino</option>
+                                    </select>
+                                    <label for="sexo">Sexo</label>
+                                </li>
+                                <li>
+                                    <select name="civil_status" id="civil_status" required>
+                                        <option value=" " disabled selected>-- Selecionar --</option>
+                                        <option value="one"><span>Solteiro(a)</span></option>
+                                        <option value="two">Casado(a)</option>
+                                        <option value="three">Viúvo(a)</option>
+                                    </select>
+                                    <label for="civil_status">Estado Civil</label>
+                                </li>
+                                <li>
+                                    <input type="date" id="birth_date" required />
+                                    <label for="birth_date">Data de Nascimento</label>
+                                </li>
+                                <li>  
+                                    <select name="education_status" id="education_status" required>
+                                        <option value="" disabled selected>-- Selecionar --</option>
+                                        <option value="one">Ensino Médio Completo</option>
+                                        <option value="two">Ensino Médio Incompleto</option>
+                                        <option value="three">Ensino Superior Completo</option>
+                                        <option value="four">Ensino Superior Incompleto</option>
+                                    </select>
+                                    <label for="education_status">Escolaridade</label>
+                                </li>
+                                <li>
+                                    <input type="number" id="tel_number" placeholder=" " autocomplete="off" />
+                                    <label for="tel_number">Telefone</label>
+                                </li>
+                                <li>
+                                    <input type="number" id="phone_number" placeholder=" " required autocomplete="off" />
+                                    <label for="phone_number">Celular</label>
+                                </li>
+                                <li>
+                                    <input type="email" id="email" placeholder=" " required autocomplete="off" />
+                                    <label for="email">E-mail</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+        
+                    <details class="section_two">
+                        <summary>
+                            <span class="m_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751   c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0   c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" data-original="#000000"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                            Endereço
+                        </summary>
+                        <div>
+                            <ul>
+                                <div class="line-list"></div>
+                                <li> 
+                                    <input type="number" id="zip" placeholder=" " autocomplete="off" />
+                                    <label for="zip" autocomplete="off">CEP</label>
+                                </li>
+                                <li>
+                                    <input type="text" id="name_city" placeholder=" " autocomplete="off" />
+                                    <label for="name_city">Cidade</label>
+                                </li>
+                                <li>
+                                    <input type="text" id="name_uf" placeholder=" " autocomplete="off" />
+                                    <label for="name_uf">Estado</label>
+                                </li>
+                                <li>
+                                    <input type="text" id="neighborhood_name" placeholder=" " autocomplete="off" />
+                                    <label for="neighborhood_name">Bairro</label>
+                                </li>
+                                <li>
+                                    <input type="text" id="address" placeholder=" " autocomplete="off" />
+                                    <label for="address">Rua</label>
+                                </li>
+                                <li>
+                                    <input type="number" id="address2" placeholder=" " autocomplete="off" />
+                                    <label for="address2">Número</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </details>
+        
+                    <details class="section_three">
+                        <summary>
+                            <span class="m_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751   c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0   c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" data-original="#000000"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                            Cursos
+                        </summary>
+                        <div>
+                            <ul>
+                                <div class="line-list"></div>
+                                <div class="btn_remove">
+                                    <a href>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 25 25" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                                                <g>
+                                                    <path d="M19.5,4H17V3.25A1.37,1.37,0,0,0,15.51,2h-6A1.37,1.37,0,0,0,8,3.25V4H5.5A1.5,1.5,0,0,0,4,5.5v2a.5.5,0,0,0,.5.5H5V21.5A1.5,1.5,0,0,0,6.5,23h12A1.5,1.5,0,0,0,20,21.5V8h.5a.5.5,0,0,0,.5-.5v-2A1.5,1.5,0,0,0,19.5,4ZM9,3.25c0-.09.18-.25.49-.25h6c.31,0,.49.16.49.25V4H9ZM19,21.5a.5.5,0,0,1-.5.5H6.5a.5.5,0,0,1-.5-.5V8H19ZM20,7H5V5.5A.5.5,0,0,1,5.5,5h14a.5.5,0,0,1,.5.5Z" ></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 25 25" style="enable-background:new 0 0 512 512" xml:space="preserve">~
+                                                <g>
+                                                    <path d="m19.5 4h-14a1.5 1.5 0 0 0 -1.5 1.5v2a.5.5 0 0 0 .5.5h16a.5.5 0 0 0 .5-.5v-2a1.5 1.5 0 0 0 -1.5-1.5z"></path>
+                                                    <path d="m16.5 5a.5.5 0 0 1 -.5-.5v-1.25c0-.09-.18-.25-.49-.25h-6c-.33 0-.51.16-.51.25v1.25a.5.5 0 0 1 -1 0v-1.25a1.37 1.37 0 0 1 1.49-1.25h6a1.37 1.37 0 0 1 1.51 1.25v1.25a.5.5 0 0 1 -.5.5z"></path>
+                                                    <path d="m20 9v12.5a1.5 1.5 0 0 1 -1.5 1.5h-12a1.5 1.5 0 0 1 -1.5-1.5v-12.5z"></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div>Deletar</div>
+                                    </a>
+                                </div>
+                                <li>
+                                    <input type="text" id="course_company_name" placeholder=" " autocomplete="off" />
+                                    <label for="course_company_name" autocomplete="off">Nome</label>
+                                </li>
+                                <li>
+                                    <input type="text" id="course_function" placeholder=" " autocomplete="off" />
+                                    <label for="course_function">Função</label>
+                                </li>
+                                <li>
+                                    <select id="course_status" placeholder=" ">
+                                            <option value="" disabled selected>-- Selecionar --</option>
+                                            <option value="one">Concluído</option>
+                                            <option value="one">Ativo</option>
+                                            <option value="one">Cancelado</option>
+                                    </select>
+                                    <label for="course_status">Status</label>
+                                </li>
+                                <li>
+                                    <input type="date" id="course_start" placeholder=" " autocomplete="off" />
+                                    <label for="course_start">Início</label>
+                                </li>
+                                <li>
+                                    <input type="date" id="course_end" placeholder=" " autocomplete="off" />
+                                    <label for="course_end">Término</label>
+                                </li>
+                            </ul>
+                            <ul>
+                                <div class="line-list"></div>
+                                <div class="btn_remove">
+                                    <a href>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 25 25" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                                                <g>
+                                                    <path d="M19.5,4H17V3.25A1.37,1.37,0,0,0,15.51,2h-6A1.37,1.37,0,0,0,8,3.25V4H5.5A1.5,1.5,0,0,0,4,5.5v2a.5.5,0,0,0,.5.5H5V21.5A1.5,1.5,0,0,0,6.5,23h12A1.5,1.5,0,0,0,20,21.5V8h.5a.5.5,0,0,0,.5-.5v-2A1.5,1.5,0,0,0,19.5,4ZM9,3.25c0-.09.18-.25.49-.25h6c.31,0,.49.16.49.25V4H9ZM19,21.5a.5.5,0,0,1-.5.5H6.5a.5.5,0,0,1-.5-.5V8H19ZM20,7H5V5.5A.5.5,0,0,1,5.5,5h14a.5.5,0,0,1,.5.5Z" ></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 25 25" style="enable-background:new 0 0 512 512" xml:space="preserve">~
+                                                <g>
+                                                    <path d="m19.5 4h-14a1.5 1.5 0 0 0 -1.5 1.5v2a.5.5 0 0 0 .5.5h16a.5.5 0 0 0 .5-.5v-2a1.5 1.5 0 0 0 -1.5-1.5z"></path>
+                                                    <path d="m16.5 5a.5.5 0 0 1 -.5-.5v-1.25c0-.09-.18-.25-.49-.25h-6c-.33 0-.51.16-.51.25v1.25a.5.5 0 0 1 -1 0v-1.25a1.37 1.37 0 0 1 1.49-1.25h6a1.37 1.37 0 0 1 1.51 1.25v1.25a.5.5 0 0 1 -.5.5z"></path>
+                                                    <path d="m20 9v12.5a1.5 1.5 0 0 1 -1.5 1.5h-12a1.5 1.5 0 0 1 -1.5-1.5v-12.5z"></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div>Deletar</div>
+                                    </a>
+                                </div>
+                                <li>
+                                    <input type="text" id="course_company_name-2" placeholder=" " autocomplete="off" />
+                                    <label for="course_company_name-2" autocomplete="off">Nome</label>
+                                </li>
+                                <li>
+                                    <input type="text" id="course_function-2" placeholder=" " autocomplete="off" />
+                                    <label for="course_function-2">Função</label>
+                                </li>
+                                <li>
+                                    <select id="course_status-2" placeholder=" ">
+                                            <option value="" disabled selected>-- Selecionar --</option>
+                                            <option value="one">Concluído</option>
+                                            <option value="one">Ativo</option>
+                                            <option value="one">Cancelado</option>
+                                    </select>
+                                    <label for="course_status-2">Status</label>
+                                </li>
+                                <li>
+                                    <input type="date" id="course_start-2" placeholder=" " autocomplete="off" />
+                                    <label for="course_start-2">Início</label>
+                                </li>
+                                <li>
+                                    <input type="date" id="course_end-2" placeholder=" " autocomplete="off" />
+                                    <label for="course_end-2">Término</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href class="btn_add">Adicionar +</a>
+                    </details>
+        
+                    <details class="section_four">
+                        <summary>
+                            <span class="m_icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 451.847 451.847" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                                    <g xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M225.923,354.706c-8.098,0-16.195-3.092-22.369-9.263L9.27,151.157c-12.359-12.359-12.359-32.397,0-44.751   c12.354-12.354,32.388-12.354,44.748,0l171.905,171.915l171.906-171.909c12.359-12.354,32.391-12.354,44.744,0   c12.365,12.354,12.365,32.392,0,44.751L248.292,345.449C242.115,351.621,234.018,354.706,225.923,354.706z" data-original="#000000"></path>
+                                    </g>
+                                </svg>
+                            </span>
+                            Experiência
+                        </summary>
+                        <div>
+                            <ul>
+                                <div class="line-list"></div>
+                                <div class="btn_remove">
+                                    <a href>
+                                        <div>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 25 25" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                                                <g>
+                                                    <path d="M19.5,4H17V3.25A1.37,1.37,0,0,0,15.51,2h-6A1.37,1.37,0,0,0,8,3.25V4H5.5A1.5,1.5,0,0,0,4,5.5v2a.5.5,0,0,0,.5.5H5V21.5A1.5,1.5,0,0,0,6.5,23h12A1.5,1.5,0,0,0,20,21.5V8h.5a.5.5,0,0,0,.5-.5v-2A1.5,1.5,0,0,0,19.5,4ZM9,3.25c0-.09.18-.25.49-.25h6c.31,0,.49.16.49.25V4H9ZM19,21.5a.5.5,0,0,1-.5.5H6.5a.5.5,0,0,1-.5-.5V8H19ZM20,7H5V5.5A.5.5,0,0,1,5.5,5h14a.5.5,0,0,1,.5.5Z" ></path>
+                                                </g>
+                                            </svg>
+                                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" x="0" y="0" viewBox="0 0 25 25" style="enable-background:new 0 0 512 512" xml:space="preserve">~
+                                                <g>
+                                                    <path d="m19.5 4h-14a1.5 1.5 0 0 0 -1.5 1.5v2a.5.5 0 0 0 .5.5h16a.5.5 0 0 0 .5-.5v-2a1.5 1.5 0 0 0 -1.5-1.5z"></path>
+                                                    <path d="m16.5 5a.5.5 0 0 1 -.5-.5v-1.25c0-.09-.18-.25-.49-.25h-6c-.33 0-.51.16-.51.25v1.25a.5.5 0 0 1 -1 0v-1.25a1.37 1.37 0 0 1 1.49-1.25h6a1.37 1.37 0 0 1 1.51 1.25v1.25a.5.5 0 0 1 -.5.5z"></path>
+                                                    <path d="m20 9v12.5a1.5 1.5 0 0 1 -1.5 1.5h-12a1.5 1.5 0 0 1 -1.5-1.5v-12.5z"></path>
+                                                </g>
+                                            </svg>
+                                        </div>
+                                        <div>Deletar</div>
+                                    </a>
+                                </div>
+                                <li>
+                                    <input type="text" id="company_name" placeholder=" " autocomplete="off" />
+                                    <label for="company_name">Empresa</label>
+                                </li>
+                                <li>  
+                                    <input type="text" id="work_function" placeholder=" " autocomplete="off" />
+                                    <label for="work_function">Função</label>
+                                </li>
+                                <li>
+                                    <input type="date" id="start_work" placeholder=" " autocomplete="off" />
+                                    <label for="start_work">Início</label>
+                                </li>
+                                <li>
+                                    <input type="date" id="work_end" placeholder=" " autocomplete="off" />
+                                    <label for="work_end">Término</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href class="btn_add">Adicionar +</a>
+                    </details>
+
+                    <button type="submit">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="512" height="512" x="0" y="0" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512 512" xml:space="preserve">
+                                <path d="M9.47,192.489c-5.539,2.215-9.248,7.49-9.461,13.451c-0.212,5.963,3.115,11.488,8.482,14.09l176.547,85.623L490.696,0.002    L9.47,192.489z"></path>
+                                <path d="M206.344,326.96l85.624,176.548c2.525,5.206,7.798,8.491,13.552,8.491c0.179,0,0.357-0.003,0.538-0.01    c5.962-0.212,11.237-3.921,13.453-9.46L512.001,21.306L206.344,326.96z"></path>
+                            </svg>
+                        </span>
+                        Enviar
+                    </button>
+                </form>
+            </div>
+        </div>
+
     </body>
 </html>
